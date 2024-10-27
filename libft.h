@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:14:00 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/26 13:51:10 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:15:38 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int	ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -43,5 +44,7 @@ char    *ft_strdup(const char *s1);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
 
 #endif
