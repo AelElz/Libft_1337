@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:14:00 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/27 20:15:38 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/27 21:54:40 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
 void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char *s, int fd);
-
+void	ft_putstr_fd(char *s, int fd);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+	
 #endif

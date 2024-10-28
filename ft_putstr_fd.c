@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:51:34 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/27 20:17:51 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/27 21:55:12 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void    ft_putstr_fd(char *s, int fd)
 {
-    if (s == NULL)
-        return;
-    write (fd, s, ft_strlen(s));
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	write(fd, s, i);
 }
