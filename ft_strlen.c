@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:56:39 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/26 09:20:28 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:32:49 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t  ft_strlen(const char *s)
 {
-    size_t  i;
+	size_t  i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
