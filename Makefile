@@ -1,4 +1,4 @@
-LIBC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
 		ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c \
 		ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
@@ -7,30 +7,57 @@ LIBC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_putstr_fd.c
 
 
-SRCS = ${LIBC}
-
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -I ./
+CFLAGS = -Wall -Wextra -Werror
 
-%.o:%.c
-	${CC} ${CFLAGS} -c $< -o $@
+$(NAME):	$(OBJS)
+		ar -rsc $(NAME) $(OBJS)
 
-${NAME}:	${OBJS}
-		ar -rsc ${NAME} ${OBJS}
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-all: 	${NAME}
+all: 	$(NAME)
 
 clean:
-		rm -f ${OBJS}
+		rm -f $(OBJS)
 
 fclean:	clean;
-		rm -f ${NAME}
+		rm -f $(NAME)
 
 re:	fclean all
 
 .PHONY: all clean fclean re
+#NAME = libft.a
+
+#SRC_FLS = ft_isalpha.c
+
+#FLAGS = -Wall -Wextra -Werror
+
+#MK_ARCHV = ar rcs
+
+#CC = cc
+
+#OBJ_FLS = $(SRC_FLS:.c=.o)
+
+#all: $(NAME)
+
+#$(NAME): $(OBJ_FLS)
+#    $(MK_ARCHV) $@ $^
+
+#%.o: %.c
+    #$(CC) $(FLAGS) -c $< -o $@
+
+#clean:
+ #   rm -f $(OBJ_FLS)
+
+#fclean: clean
+  #  rm -f $(NAME)
+
+#re: fclean all
+
+#.PHONY: clean fclean all re
