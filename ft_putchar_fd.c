@@ -6,13 +6,13 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:50:22 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:15 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:26:37 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }

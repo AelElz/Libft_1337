@@ -6,11 +6,12 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:50:34 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 14:21:05 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:49:44 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int  ft_isset(char c, char const *set)
 {
     size_t  i;
