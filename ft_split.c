@@ -6,66 +6,58 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:00:19 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:20 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/29 21:03:02 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdel(char s, char c)
+static int	ft_countworld(char const *s, char c)
 {
-	return (s == c);   
-}
-int ft_count_words(char const *s, char c)
-{
-	int count = 0;
-	int i = 0;
+	int	i;
+	int	count;
 
+	i = 0;
+	count = 0;
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i] && s[i] != c)
-		{
+		if (s[i] != c)
 			count++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
+		i++;
 	}
 	return (count);
 }
-char    **ft_split(char const *s, char c)
+static char	ft_malloc(char const *s, char c)
 {
-	size_t  i;
-	size_t  j;
-	size_t  start;
-	char    **new;
+	int	len 
+	char	*new;
 
-	i = 0;
-	j = 0;
-	if (!s || !(new = malloc((ft_count_words(s, c) + 1) * sizeof(char *))))
-		return NULL;
-	while (s[i])
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	new = (char *)malloc((len + 1) * sizeof(char));
+	if (!new)
+		return (NULL);
+	while (s[len])
 	{
-		while (s[i] && ft_isdel(s[i], c))
-			i++;
-		start = i;
-		while (s[i] && !ft_isdel(s[i], c))
-			i++;
-		if (i < start)
-		{
-			if (!new[j])
-			{
-				while (j--)
-				{
-					free(new[j]);
-					free(new);
-					return (NULL);
-				}
-			}
-			ft_strlcpy(new[j++], s + start, i - start + 1);
-		}
+		new[len] = s[len];
+		len++;
 	}
-	new[j] = NULL;
+	new[len] = '\0';
 	return (new);
+}
+char	**ft_split(char const *s, char c)
+{
+	int	i;
+	int	word;
+	char	**new;
+	
+	i = 0;
+	word = ft_countworld(s, c);
+	new = (char *)malloc((ft_malloc(s, c) + 1) * sizeof(char));
+	if (!new)
+		return (NULL);
+	while ()
 }
