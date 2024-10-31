@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:40:00 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:30:32 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:51:07 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13)
-		|| (str[i] == ' '))
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' '))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

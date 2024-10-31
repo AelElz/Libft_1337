@@ -6,36 +6,38 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:31:29 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:33:38 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:55:48 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_empty_str(void)
+char	*ft_empty_str(void)
 {
-	char    *empty;
+	char	*empty;
 
 	empty = (char *)malloc(1);
 	if (empty)
 		empty[0] = '\0';
 	return (empty);
 }
-size_t  strlen(const char *s)
+
+size_t	strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t  i;
-	size_t  str_len;
-	char    *new;
-	
+	size_t	i;
+	size_t	str_len;
+	char	*new;
+
 	str_len = strlen(s);
 	if (!s)
 		return (NULL);

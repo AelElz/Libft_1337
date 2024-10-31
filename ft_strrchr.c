@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -37,5 +37,5 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		printf("Character '%c' not found\n", c);
 
-	return 0;
+	return (0);
 }*/

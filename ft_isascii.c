@@ -6,13 +6,13 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:49:36 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:31:41 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:51:22 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

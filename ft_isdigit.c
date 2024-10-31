@@ -6,13 +6,13 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:43:08 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 15:24:07 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:09:05 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

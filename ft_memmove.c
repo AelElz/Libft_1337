@@ -6,28 +6,24 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:46:14 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:10 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:58:58 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t  i;
-	unsigned char   *ptr_src;
-	unsigned char   *ptr_dest;
-	
-	ptr_src = (unsigned char *)src;
-	ptr_dest = (unsigned char *)dst;
+	size_t	i;
+
 	if (!dst && !src)
 		return (NULL);
-	if (ptr_dest < ptr_src)
+	if ((unsigned char *)dst < (unsigned char *)src)
 	{
 		i = 0;
 		while (i < len)
 		{
-			ptr_dest[i] = ptr_src[i];
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
@@ -36,7 +32,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 		while (len > 0)
 		{
 			len--;
-			ptr_dest[len] = ptr_src[len];
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
 		}
 	}
 	return (dst);
@@ -47,5 +43,5 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	printf("Before ft_memmove: %s\n", str1);
 	ft_memmove(str1 + 7, str1, 6);
 	printf("After ft_memmove: %s\n", str1);
-	return 0;
+	return (0);
 }*/

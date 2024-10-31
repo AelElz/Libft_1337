@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t  i;
-	size_t  dst_len;
-	size_t  src_len;
-	size_t  total_len;
+	size_t	i;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	total_len;
 
 	dst_len = 0;
 	src_len = 0;
@@ -46,6 +46,6 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t result = ft_strlcat(dest, src, sizeof(dest));
 	printf("After strlcat: \"%s\"\n", dest);
 	printf("Length attempted to create: %zu\n", result);
-	
-	return 0;
+
+	return (0);
 }*/

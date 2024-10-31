@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:20:34 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/31 11:29:10 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:00:00 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		write (fd, &s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
-	write (fd, "\n", 1);
+	write(fd, "\n", 1);
 }
