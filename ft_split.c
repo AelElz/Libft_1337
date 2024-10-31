@@ -6,58 +6,63 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:00:19 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/29 21:03:02 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:59:10 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countworld(char const *s, char c)
+int	ft_word_count(char const *s, char c)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
-	while (s[i] && s[i] == c)
+	while (s[i])
+	{
+		if (s[i] != c && s[i + 1] == c || s[i + 1] == '\0')
+			count++;
 		i++;
+	}
+	return (count);
+}
+
+void	ft_free(char **s, int i)
+{
+	while (i > 0)
+	{
+		--i;
+		free(s[i]);
+	}
+	free(s);
+}
+
+char	*ft_fill_word(char **new, char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] != c)
 			count++;
 		i++;
 	}
-	return (count);
-}
-static char	ft_malloc(char const *s, char c)
-{
-	int	len 
-	char	*new;
-
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	new = (char *)malloc((len + 1) * sizeof(char));
+	new = (char *)malloc((count + 1) * sizeof(char));
 	if (!new)
 		return (NULL);
-	while (s[len])
-	{
-		new[len] = s[len];
-		len++;
-	}
-	new[len] = '\0';
+	new[count] = '\0';
 	return (new);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	word;
-	char	**new;
-	
+	int		i;
+	int		count;
+	char	**word;
+
 	i = 0;
-	word = ft_countworld(s, c);
-	new = (char *)malloc((ft_malloc(s, c) + 1) * sizeof(char));
-	if (!new)
-		return (NULL);
-	while ()
+	count = ft_word_count(s, c);
 }
