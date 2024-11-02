@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:51:23 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/31 17:51:10 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:25:05 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
 	unsigned char	*ptr;
 
-	i = 0;
 	ptr = (unsigned char *)s;
-	while (i < n)
+	while (n > 0)
 	{
-		ptr[i] = 0;
-		i++;
+		*ptr = 0;
+		ptr++;
+		n--;
 	}
 }

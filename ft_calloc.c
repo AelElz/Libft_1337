@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:48:32 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/31 17:51:14 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/02 20:14:41 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*new;
 	size_t	total_size;
-	size_t	i;
 
-	i = 0;
+	if (count == 0 || size == 0)
+		return (malloc(0));
+	if (count != 0 && size > SIZE_MAX / count)
+		return (NULL);
 	total_size = count * size;
 	new = malloc(total_size);
 	if (!new)
-		return (NULL);
-	while (i < total_size)
-	{
-		new[i] = 0;
-		i++;
-	}
+		return (NULL); 
+	ft_bzero(new, total_size);
 	return ((void *)new);
 }

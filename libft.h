@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:14:00 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/01 14:02:56 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/02 16:49:25 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
