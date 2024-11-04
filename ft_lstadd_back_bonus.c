@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:06:29 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/04 19:55:26 by ael-azha         ###   ########.fr       */
+/*   Created: 2024/11/04 23:00:26 by ael-azha          #+#    #+#             */
+/*   Updated: 2024/11/04 23:10:43 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*new_nodes;
+	t_list	*last;
 
-	new_nodes = (t_list *)malloc(sizeof(t_list));
-	if (!new_nodes)
-		return (NULL);
-	new_nodes -> content = content;
-	new_nodes -> next = NULL;
-	return (new_nodes);
+	last = *lst;
+	if (new == NULL)
+		return ;
+	if ((*lst) == NULL)
+	{
+		*lst = new;
+		new -> next = NULL;
+		return ;
+	}
+	while (last -> next != NULL)
+		last = last -> next;
+	last -> next = new;
+	new -> next = NULL;
 }
