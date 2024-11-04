@@ -8,22 +8,26 @@ SRCS =	ft_atoi.c ft_isdigit.c ft_memset.c ft_strncmp.c ft_toupper.c\
 			ft_isascii.c ft_memmove.c ft_strdup.c ft_strmapi.c ft_tolower.c\
 			ft_striteri.c ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c\
 
-FLAGS = -Wall -Wextra -Werror
+BONUS =	ft_lstnew_bonus.c
+
+CFLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
 OBJS = $(SRCS:.c=.o)
+
+OBJSBONUS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $@ $?
 
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+bonus: $(OBJS) $(OBJSBONUS)
+	ar rcs $(NAME) $(OBJS) $(OBJSBONUS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJSBONUS)
 
 fclean: clean
 	rm -f $(NAME)
