@@ -9,7 +9,8 @@ SRCS =	ft_atoi.c ft_isdigit.c ft_memset.c ft_strncmp.c ft_toupper.c\
 			ft_striteri.c ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c\
 
 BONUS =	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
-		ft_lstlast_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c\
+			ft_lstlast_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c\
+			ft_lstiter_bonus.c ft_lstmap_bonus.c ft_lstadd_back_bonus.c
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -22,10 +23,13 @@ OBJSBONUS = $(BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $@ $?
+	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(OBJSBONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJSBONUS)
+bonus: $(OBJSBONUS)
+	ar rcs $(NAME) $(OBJSBONUS)
+
+%.o:%.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:
 	rm -f $(OBJS) $(OBJSBONUS)
@@ -35,4 +39,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all re bonus
