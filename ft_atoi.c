@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:40:00 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/06 18:57:35 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:04:42 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
-		if (sign == 1 && result > INT_MAX)//	for 32 bits kayna 2147483647
-			return (INT_MAX);//					for 64 bits kayn 9 223 372 036 854
-		if (sign == -1 && - result < INT_MIN)//	for 32 bits kayn – 2147483648
-			return (INT_MIN);//				//	for 64 bits kayn – 9 223 372 036 854
+		if (sign == 1 && result > INT_MAX)
+			return (INT_MAX);
+		if (sign == -1 && - result < INT_MIN)
+			return (INT_MIN);
 		i++;
 	}
 	return (result * sign);

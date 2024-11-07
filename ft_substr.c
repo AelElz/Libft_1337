@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:31:29 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/31 15:55:48 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:03:45 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,18 @@ char	*ft_empty_str(void)
 	return (empty);
 }
 
-size_t	strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	str_len;
 	char	*new;
 
-	str_len = strlen(s);
 	if (!s)
 		return (NULL);
-	if (start >= str_len || len == 0)
+	str_len = ft_strlen(s);
+	if (start >= str_len)
+		return (ft_empty_str());
+	if (len == 0)
 		return (ft_empty_str());
 	if (start + len > str_len)
 		len = str_len - start;
