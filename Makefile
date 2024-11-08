@@ -25,13 +25,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJSBONUS) $(OBJS)
-
 bonus: $(OBJS) $(OBJSBONUS)
 	ar rcs $(NAME) $(OBJS) $(OBJSBONUS)
 
 %.o:%.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(OBJSBONUS)

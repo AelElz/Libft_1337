@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:44:47 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:33:29 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:46:28 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*int main()
-{
-	char s[] = "test test";
-	char c = 't';
-	char *result = ft_strrchr(s, c);
-	if (result != NULL)
-		printf("Last occurrence of '%c' is: %s\n", c, result);
-	else
-		printf("Character '%c' not found\n", c);
-
-	return (0);
-}*/

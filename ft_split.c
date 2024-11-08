@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:00:19 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/07 12:03:57 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:36:44 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_free(char **s, int i)
 
 static char	**fill_words(char const *s, char c, char **ptr)
 {
-	int	len;
+	int	start;
 	int	pos;
 	int	i;
 
@@ -47,10 +47,10 @@ static char	**fill_words(char const *s, char c, char **ptr)
 	{
 		if (s[i] != c)
 		{
-			len = i;
+			start = i;
 			while (s[i] != c && s[i])
 				i++;
-			ptr[pos] = ft_substr(s, len, i - len);
+			ptr[pos] = ft_substr(s, start, i - start);
 			if (!ptr[pos])
 				return (ft_free(ptr, pos), NULL);
 			pos++;
