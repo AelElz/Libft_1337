@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:50:34 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/31 18:07:21 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:31:04 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, &s1[start], end - start + 1);
 	return (new);
 }
-/*int main()
-{
-	char	s[] = "aaaHelloaaaWorldaaa";
-	char	set[] = "a";
-
-	printf("%s\n",ft_strtrim(s, set));
-	return (0);
-}
-*/

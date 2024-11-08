@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:48:32 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/03 21:23:53 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:39:43 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == 0 || size == 0)
 		return (malloc(0));
+	if (count != 0 && size > SIZE_MAX / count)
+		return (NULL);
 	total_size = count * size;
 	new = malloc(total_size);
 	if (!new)

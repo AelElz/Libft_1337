@@ -25,11 +25,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-<<<<<<< HEAD
 bonus: $(OBJSBONUS) $(OBJS)
-=======
+
 bonus: $(OBJS) $(OBJSBONUS)
->>>>>>> fb5ebff396638065db0d3d0806105e4b278f867b
 	ar rcs $(NAME) $(OBJS) $(OBJSBONUS)
 
 %.o:%.c libft.h

@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:37:44 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:29 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:46:11 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (total_len);
 }
-/*int main()
-{
-	char dest[30] = "hello";
-	char src[] = ", world";
-
-	printf("\nBefore strlcat: \"%s\"\n", dest);
-	size_t result = ft_strlcat(dest, src, sizeof(dest));
-	printf("After strlcat: \"%s\"\n", dest);
-	printf("Length attempted to create: %zu\n", result);
-
-	return (0);
-}*/

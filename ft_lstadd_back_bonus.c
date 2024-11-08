@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:00:26 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/05 20:54:00 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:19:59 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst)
 		return ;
-	if (!*lst)
+	if (*lst == NULL)
 		*lst = new;
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:18:37 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/10/28 16:36:35 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:52:29 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-/*int main()
-{
-	char s[] = "ayoub";
-	char c = 'a';
-	char *result = ft_strchr(s, c);
-	printf("%c\n", c);
-	return (0);
-}*/

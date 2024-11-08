@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:48:33 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/05 18:26:04 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:28:42 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL || del == NULL)
+	if (!lst || !del)
 		return ;
-	del(lst -> content);
+	del (lst -> content);
 	free(lst);
 }
