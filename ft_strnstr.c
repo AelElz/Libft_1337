@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:22:20 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/08 22:50:04 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:02:59 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *src, const char *search, size_t len)
 	size_t	search_len;
 
 	i = 0;
+	if (!src || !search)
+		return (NULL);
 	search_len = ft_strlen(search);
 	if (search_len == 0)
 		return ((char *)&src[i]);
