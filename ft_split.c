@@ -6,13 +6,13 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:00:19 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/09 18:27:52 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/10 13:56:01 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_word_count(char const *s, char c)
+static int	ft_word_count(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,8 +28,10 @@ int	ft_word_count(char const *s, char c)
 	return (count);
 }
 
-void	ft_free(char **s, int i)
+static void	ft_free(char **s, int i)
 {
+	if (s == NULL)
+		return ;
 	while (i > 0)
 		free(s[--i]);
 	free(s);

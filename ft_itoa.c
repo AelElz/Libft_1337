@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:02:25 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/09 18:26:33 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:12:52 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,10 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 	result[len] = '\0';
 	return (result);
+}
+#include <stdio.h>
+int main()
+{
+	int c = 0;
+	printf("%s\n",ft_itoa(c));
 }
