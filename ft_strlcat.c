@@ -6,7 +6,7 @@
 /*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:37:44 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/10 17:35:35 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:48:23 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-int main()
-{
-	printf("%zu\n", ft_strlcat(NULL, "", 1));
-	printf("%zu\n", strlcat(NULL, "", 1));
-}
+
